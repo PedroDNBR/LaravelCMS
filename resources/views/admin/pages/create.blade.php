@@ -22,7 +22,7 @@
         </div>
         <div class="form-group">
             <label for="exampleInputEmail1">Conteúdo</label>
-            <textarea name="body" class="form-control" cols="30" rows="10">{{old('body')}}</textarea>
+            <textarea name="body" class="form-control bodyfield" cols="30" rows="10">{{old('body')}}</textarea>
           </div>
         <div>
             <input type="submit" value="Enviar" class="btn btn-md btn-success" id="exampleInputPassword1">
@@ -40,4 +40,21 @@
         </div>
     @endif
 </div>
+
+<script src="https://cdn.tiny.cloud/1/no-api-key/tinymce/5/tinymce.min.js" referrerpolicy="origin"></script>
+<script>
+  tinymce.init({
+    selector:'textarea.bodyfield',
+    height: 300,
+    menubar: false,
+    plugins: ['link', 'table', 'image', 'autoresize', 'lists'],
+    toolbar: 'undo redo | formatselect | bold italic backcolor | alignleft aligncenter alignright alignjustify | table | link image | bullist numlist',
+    content_css: [
+      '{{asset('assets/css/content.css')}}'
+    ],
+    images_upload_url: '{{route('imageupload')}}',
+    images_upload_credentials: true,
+    convert_urls: false
+  });
+</script>
 @endsection
