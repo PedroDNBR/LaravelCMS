@@ -24,7 +24,7 @@
         <link rel="stylesheet" href="{{asset('assets/css/slicknav.css')}}">
         <link rel="stylesheet" href="{{asset('assets/css/style.css')}}">
     </head>
-    <body>
+    <body style="background: {{$front_config['bgcolor']}};">
          <!-- header-start -->
         <header>
             <div class="header-area ">
@@ -92,8 +92,10 @@
                                     </a>
                                 </div>
                                 <p>
-                                    Firmament morning sixth subdue darkness
-                                    creeping gathered divide.
+                                    {{$front_config['subtitle']}}
+                                </p>
+                                <p>
+                                    {{$front_config['email']}}
                                 </p>
                                 <div class="socail_links">
                                     <ul>

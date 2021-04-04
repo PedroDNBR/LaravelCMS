@@ -11,12 +11,11 @@
                 <div class="row align-items-center">
                     <div class="col-xl-7 col-md-6">
                         <div class="slider_text ">
-                            <h3 class="wow fadeInDown" data-wow-duration="1s" data-wow-delay=".1s" >Promote your app <br>
-                                with applab</h3>
-                            <p class="wow fadeInLeft" data-wow-duration="1s" data-wow-delay=".1s">Get more users to promote your app with this template</p>
-                            <div class="video_service_btn wow fadeInLeft" data-wow-duration="1s" data-wow-delay=".1s">
+                            <h3 class="wow fadeInDown" style="color: {{$front_config['textcolor']}}!IMPORTANT;" data-wow-duration="1s" data-wow-delay=".1s" >{{$front_config['title']}}</h3>
+                            <p class="wow fadeInLeft" style="color: {{$front_config['textcolor']}}!IMPORTANT;" data-wow-duration="1s" data-wow-delay=".1s">{{$front_config['subtitle']}}</p>
+                            <!--<div class="video_service_btn wow fadeInLeft" data-wow-duration="1s" data-wow-delay=".1s">
                                 <a href="#" class="boxed-btn3">Get Start Now</a>
-                            </div>
+                            </div>-->
                         </div>
                     </div>
                     <div class="col-xl-5 col-md-6">

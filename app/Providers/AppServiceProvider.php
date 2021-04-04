@@ -6,7 +6,7 @@ use Illuminate\Support\ServiceProvider;
 use Illuminate\Pagination\Paginator;
 use Illuminate\Support\Facades\View;
 use App\Models\Page;
-
+use App\Models\Setting;
 
 class AppServiceProvider extends ServiceProvider
 {
@@ -41,6 +41,18 @@ class AppServiceProvider extends ServiceProvider
         }
 
         View::share("front_menu", $frontMenu);
+
+        //Configurações
+
+        $config = [];
+        $settings = Setting::all();
+
+        foreach($settings as $setting){
+            $config[$setting['name']] = $setting['content'];
+        }
+
+        View::share("front_config", $config);
+
 
     }
 }
