@@ -24,7 +24,7 @@ SET time_zone = "+00:00";
 
 CREATE DATABASE `laravelcms`;
 USE `laravelcms`;
-
+-- teste git
 -- --------------------------------------------------------
 
 --
