@@ -5,7 +5,7 @@
 @section('content')
     
     <!-- slider_area_start -->
-    <div class="slider_area">
+    <div class="slider_area" style="background: {{$front_config['bgcolor']}};">
         <div class="single_slider  d-flex align-items-center slider_bg_1">
             <div class="container">
                 <div class="row align-items-center">

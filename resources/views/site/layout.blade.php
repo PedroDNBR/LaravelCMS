@@ -24,7 +24,7 @@
         <link rel="stylesheet" href="{{asset('assets/css/slicknav.css')}}">
         <link rel="stylesheet" href="{{asset('assets/css/style.css')}}">
     </head>
-    <body style="background: {{$front_config['bgcolor']}};">
+    <body>
          <!-- header-start -->
         <header>
             <div class="header-area ">
