@@ -35,11 +35,11 @@ class HomeController extends Controller
         $pageCount = Page::count();
 
         $userCount = User::count();
+        $pagePie = [];
 
         $visitsAll = Visitor::selectRaw('page, count(page) as c')->where('date_access', '>=', $dateInterval)->groupBy('page')->get();
-        $pagePie = [];
         foreach ($visitsAll as $visit) {
-            $pagePie[$visit['page'] = intval($visit['c'])];
+            $pagePie[$visit['page'] ] = intval($visit['c']);
         }
         
         $pageLabels = json_encode(array_keys($pagePie));
